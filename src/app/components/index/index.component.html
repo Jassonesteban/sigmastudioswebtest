@@ -1,0 +1,62 @@
+<section>
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="title-page">Prueba de desarrollo Sigma</h1>
+            </div>
+            <div class="box-description">
+                <h4 class="description-page">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, sint.
+                    Magnam
+                    unde in et error. Ut sint explicabo reiciendis, tempore veniam aperiam quisquam debitis quidem
+                    corporis
+                    ex velit eaque enim? Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <img class="img-background" src="https://sigma-studios.s3-us-west-2.amazonaws.com/test/sigma-image.png"
+                    alt="fondo inicio">
+            </div>
+            <div class="col-6">
+                <div class="card card-form">
+                    <p class="text-message-info">{{mensajeWarning}}</p>
+                    <div class="card-body">
+                        <form id="form-contact">
+                            <div class="form-group mb-4 mt-3">
+                                <label for="exampleFormControlSelect1" class="label-form-data">Departamento*</label>
+                                <select class="input-text-form" name="selectState"  id="Selectedstate" [(ngModel)] = "contacto.state"#selectState required>
+                                    <option class="option-item" *ngFor="let state of stated">{{ state.departamento}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-4 mt-4">
+                                <label for="exampleFormControlSelect1" class="label-form-data">Ciudad*</label>
+                                <select class="input-text-form" name="selectCity" #selectCity id="Selectedcity" [(ngModel)] = "contacto.city" required>
+                                    <option *ngFor="let state of stated"> {{ state.municipio}}</option>
+                                    
+                                </select>
+                            </div>
+                            <div class="form-group mb-4 mt-4">
+                                <label for="formGroupExampleInput2" class="label-form-data">Nombre*</label>
+                                <input type="text" class="input-text-form" name="Name" #Name id="NameContact" [(ngModel)] = "contacto.name" required placeholder="Nombre completo">
+                            </div>
+                            <div class="form-group mb-4 mt-4">
+                                <label for="formGroupExampleInput2" class="label-form-data" >Correo*</label>
+                                <input  type="email" class=" input-text-form" name="email" #email id="emailContact" [(ngModel)] = "contacto.email" required
+                                    placeholder="Example@mail.com">
+                            </div>
+                            <p class="text-message-success">{{mensajeExito}}</p>
+                            <div class="footer-form">
+                                <button type="button" class="btn btn-submit" (click) = "NewContact(Name, email, selectState, selectCity)">ENVIAR</button>
+                            </div>
+
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

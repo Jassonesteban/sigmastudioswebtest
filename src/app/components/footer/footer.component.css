@@ -1,0 +1,17 @@
+.text-name{
+    color: black;
+    font-family: 'Roboto';
+    float: right;
+}
+
+.footer{
+    padding: 60px;
+}
+
+.text-footer-bussines{
+    color: black;
+}
+
+.text-bussiness{
+    float: left;
+}
